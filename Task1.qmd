@@ -1,0 +1,154 @@
+---
+title: "Task1"
+author: "Your name"
+date: "10/01/2024"
+format:
+  html:
+    embed-resources: true
+editor: source
+---
+
+## Question 1 Atomic Types
+
+Create the following variables related to your chosen object:
+
+4 numeric values (e.g., population, temperature, size, rating)
+3 integer values (e.g., number of moons, buildings, inhabitants)
+2 logical values (e.g., has_water, is_inhabited)
+3 character values (e.g., name, region, category)
+
+My object is Poltava city
+
+```{r}
+# code for solving task
+
+#numeric
+temperature <- 14.3
+meters_above_sea_level <- 140.0
+auto <- 285.000
+highest_building <- 44.0
+
+
+# integer
+
+population <- 279593
+area <- 103 #m2
+shoppin_mall <- 3
+
+#logical
+
+has_water <-TRUE
+has_autobus_station <- TRUE
+
+#character
+
+name <- 'Poltava'
+region <- 'Poltavsky'
+category <- 'city'
+
+```
+
+
+## Question 2 Vectors
+
+Question description
+
+Create three different vectors:
+
+Numeric vector combining all your numeric and integer variables.
+(Use c().)
+
+Sequence vector from any number between 10–50 to 100, Choose step between 2 and 10.
+(Use seq() or :.)
+
+Logical vector of length 10 with random TRUE/FALSE values using sample().
+
+```{r}
+# code for solving task
+vec <- c(temperature, meters_above_sea_level, auto, highest_building, population, area, shoppin_mall)
+
+vec
+
+vec_seq <- seq( from = 20, to = 100, by = 6)
+vec_seq
+  
+vec_log <- sample(c(TRUE, FALSE), 10, replace = TRUE)
+vec_log
+```
+## Question 3 Marix
+
+Question description
+
+Create a 3×3 matrix with random numbers between -50 and 50
+(using sample() or runif()), and name its rows and columns according to your theme.
+
+Then calculate row and column averages using rowMeans() and colMeans().
+ 
+
+
+```{r}
+ # code for solving task
+m <- matrix(sample(-50:50, 9), nrow = 3, ncol = 3)
+m
+
+rowMeans(m)
+
+colMeans(m)
+```
+## Question 4 List
+
+Question description
+
+Create a list that combines all your previous objects:
+atomic variables, vectors, and matrix. Add one extra element — a short description of your universe as a string.
+
+
+```{r}
+# code for solving task
+list <- list(auto, name, area, has_water, vec, m)
+list
+```
+## Question 5 Factor
+
+Question description
+
+Create a factor variable representing categories within your universe, e.g.:
+
+```{r}
+# code for solving task
+
+my_factor <- factor(c("big", "big", "small", "medium", "small"), levels = c("small", "medium", "big"))
+my_factor
+```
+## Question 6 Data Frame
+
+Question description
+
+Create a data frame related to your object that includes:
+
+5–8 observations (rows)
+At least 3 columns of different data types
+(e.g., name, numeric value, logical flag, category)
+Then:
+
+Rename the columns using names() or colnames().
+Display its structure with str() and its summary with summary().
+Add a new column derived from the others (for example, a ratio or condition).
+
+```{r}
+data <- data.frame(name=c("centr","podol", "almaznyj", "levada", "maka_scena"), numeric = c(16.4, 14.6, 25.7, 25.1, 18.2), logical = c(T, F, F, T, T), category = c("big", "small", "medium", "medium", "small"))
+
+colnames(data) <- c("name", "size", "has_mall", "size")
+
+data
+
+str(data)
+
+summary(data)
+
+data$size_ratio <- data$size / max(data$size)
+
+data
+
+```
+
