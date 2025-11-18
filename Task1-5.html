@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your name">
+<meta name="author" content="Roman Havrylenko">
 <meta name="dcterms.date" content="2024-10-01">
 
 <title>Task1</title>
@@ -2219,7 +2219,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your name </p>
+             <p>Roman Havrylenko </p>
           </div>
   </div>
     
@@ -2294,7 +2294,7 @@ vertical-align: -.125em;
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>vec_log <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>vec_log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
+<pre><code> [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE</code></pre>
 </div>
 </div>
 </section>
@@ -2309,17 +2309,17 @@ vertical-align: -.125em;
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>m</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
-[1,]   39  -34  -30
-[2,]   46   38  -14
-[3,]  -18   49   11</code></pre>
+[1,]  -42    4   17
+[2,]   16   47   44
+[3,]  -48   23   40</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowMeans</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -8.333333 23.333333 14.000000</code></pre>
+<pre><code>[1] -7.00000 35.66667  5.00000</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  22.33333  17.66667 -11.00000</code></pre>
+<pre><code>[1] -24.66667  24.66667  33.66667</code></pre>
 </div>
 </div>
 </section>
@@ -2349,9 +2349,9 @@ vertical-align: -.125em;
 
 [[6]]
      [,1] [,2] [,3]
-[1,]   39  -34  -30
-[2,]   46   38  -14
-[3,]  -18   49   11</code></pre>
+[1,]  -42    4   17
+[2,]   16   47   44
+[3,]  -48   23   40</code></pre>
 </div>
 </div>
 </section>
@@ -2377,7 +2377,7 @@ Levels: small medium big</code></pre>
 <p>5–8 observations (rows) At least 3 columns of different data types (e.g., name, numeric value, logical flag, category) Then:</p>
 <p>Rename the columns using names() or colnames(). Display its structure with str() and its summary with summary(). Add a new column derived from the others (for example, a ratio or condition).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name=</span><span class="fu">c</span>(<span class="st">&quot;centr&quot;</span>,<span class="st">&quot;podol&quot;</span>, <span class="st">&quot;almaznyj&quot;</span>, <span class="st">&quot;levada&quot;</span>, <span class="st">&quot;maka_scena&quot;</span>), <span class="at">numeric =</span> <span class="fu">c</span>(<span class="fl">16.4</span>, <span class="fl">14.6</span>, <span class="fl">25.7</span>, <span class="fl">25.1</span>, <span class="fl">18.2</span>), <span class="at">logical =</span> <span class="fu">c</span>(T, F, F, T, T), <span class="at">category =</span> <span class="fu">c</span>(<span class="st">&quot;big&quot;</span>, <span class="st">&quot;small&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;small&quot;</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name=</span><span class="fu">c</span>(<span class="st">&quot;centr&quot;</span>,<span class="st">&quot;podol&quot;</span>, <span class="st">&quot;almaznyj&quot;</span>, <span class="st">&quot;levada&quot;</span>, <span class="st">&quot;mala_scena&quot;</span>), <span class="at">numeric =</span> <span class="fu">c</span>(<span class="fl">16.4</span>, <span class="fl">14.6</span>, <span class="fl">25.7</span>, <span class="fl">25.1</span>, <span class="fl">18.2</span>), <span class="at">logical =</span> <span class="fu">c</span>(T, F, F, T, T), <span class="at">category =</span> <span class="fu">c</span>(<span class="st">&quot;big&quot;</span>, <span class="st">&quot;small&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;medium&quot;</span>, <span class="st">&quot;small&quot;</span>))</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;size&quot;</span>, <span class="st">&quot;has_mall&quot;</span>, <span class="st">&quot;size&quot;</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -2388,7 +2388,7 @@ Levels: small medium big</code></pre>
 2      podol 14.6    FALSE  small
 3   almaznyj 25.7    FALSE medium
 4     levada 25.1     TRUE medium
-5 maka_scena 18.2     TRUE  small</code></pre>
+5 mala_scena 18.2     TRUE  small</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -2417,7 +2417,402 @@ Levels: small medium big</code></pre>
 2      podol 14.6    FALSE  small  0.5680934
 3   almaznyj 25.7    FALSE medium  1.0000000
 4     levada 25.1     TRUE medium  0.9766537
-5 maka_scena 18.2     TRUE  small  0.7081712</code></pre>
+5 mala_scena 18.2     TRUE  small  0.7081712</code></pre>
+</div>
+</div>
+<p>Task 2 2.1. Querying Vectors Let’s start with the vectors you created in Task 1.</p>
+<p>2.1.1. From your Sequence vector (the one with all your numbers):</p>
+<p>Select and print the 3rd element. Select and print elements 2 through 5. Select and print all values that are greater than 20 (or another number that makes sense for your data). 2.1.2. From your Logical vector:</p>
+<p>Select and print only the TRUE values. (Hint: your_vector[your_vector]). Use which() to get the indices (positions) of all the TRUE values.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>vec_seq[<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>vec_seq[<span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26 32 38 44</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>vec_seq[vec_seq <span class="sc">&gt;</span> <span class="dv">20</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 26 32 38 44 50 56 62 68 74 80 86 92 98</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>vec_log[vec_log]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(vec_log)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  2  3  4  5  6  7  8 10</code></pre>
+</div>
+</div>
+<p>2.3. Investigating Your Data Frame Use the data frame you created in Task 1.</p>
+<p>Print the first 3 rows. (Use head().) Print the value from the 4th row, 1st column. Print only the column that contains your logical values (e.g., is_habitable) as a vector. Logical Subsetting: Create a new data frame df_subset that contains only the rows that meet a specific logical condition.</p>
+<p>Example: df_subset &lt;- your_df[your_df$population &gt; 1000, ] %in% Subsetting: Create a new data frame df_subset_2 that selects rows belonging to two specific categories from your factor or character column.</p>
+<p>Example: df_subset_2 &lt;- your_df[your_df$region %in% c(“North”, “South”), ]</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      name size has_mall   size size_ratio
+1    centr 16.4     TRUE    big  0.6381323
+2    podol 14.6    FALSE  small  0.5680934
+3 almaznyj 25.7    FALSE medium  1.0000000</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>data [<span class="dv">4</span>, <span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;levada&quot;</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>has_mall</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE FALSE  TRUE  TRUE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>df_subset <span class="ot">&lt;-</span> data[data<span class="sc">$</span>size <span class="sc">&gt;</span> <span class="dv">20</span>, ]</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>df_subset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      name size has_mall   size size_ratio
+3 almaznyj 25.7    FALSE medium  1.0000000
+4   levada 25.1     TRUE medium  0.9766537</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>df_subset_2 <span class="ot">&lt;-</span> data[data<span class="sc">$</span>category <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;small&quot;</span>, <span class="st">&quot;medium&quot;</span>), ]</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>df_subset_2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] name       size       has_mall   size       size_ratio
+&lt;0 строк&gt; (или &#39;row.names&#39; нулевой длины)</code></pre>
+</div>
+</div>
+<p>2.4. Handling “Corrupted” Data (NA) Create a copy of your original data frame (e.g., df_corrupted &lt;- your_df).</p>
+<p>Introduce 3 NAs into your df_corrupted at specific locations.</p>
+<p>Example: df_corrupted[2, 3] &lt;- NA Find NAs:</p>
+<p>Use sum(is.na(df_corrupted)) to find the total number of missing values. Use colSums(is.na(df_corrupted)) to see how many NAs are in each column. Calculate with NAs:</p>
+<p>Calculate the mean() of the numeric column where you added an NA. Filter NAs:</p>
+<p>Use na.omit(df_corrupted) to create a new, “clean” data frame that contains only the complete rows.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>df_corrupted <span class="ot">&lt;-</span> data</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>df_corrupted[<span class="dv">2</span>, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>df_corrupted[<span class="dv">5</span>, <span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>df_corrupted[<span class="dv">3</span>, <span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>df_corrupted</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        name size has_mall   size size_ratio
+1      centr 16.4     TRUE    big  0.6381323
+2      podol   NA    FALSE  small  0.5680934
+3   almaznyj 25.7    FALSE   &lt;NA&gt;  1.0000000
+4     levada 25.1     TRUE medium  0.9766537
+5 mala_scena 18.2       NA  small  0.7081712</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(df_corrupted))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(df_corrupted))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      name       size   has_mall       size size_ratio 
+         0          1          1          1          0 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df_corrupted<span class="sc">$</span>size)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df_corrupted<span class="sc">$</span>size, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 21.35</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df_corrupted)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>df_clean</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    name size has_mall   size size_ratio
+1  centr 16.4     TRUE    big  0.6381323
+4 levada 25.1     TRUE medium  0.9766537</code></pre>
+</div>
+</div>
+<p>2.5. Bonus Challenge: which() Use which.max() or which.min() to find the row number (index) of the observation with the highest or lowest value in one of your numeric columns.</p>
+<p>Use that index to print the row with that observation.</p>
+<p>Example: highest_pop_index &lt;- which.max(your_df$population) Example: your_df[highest_pop_index, ]</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>highest_size_index <span class="ot">&lt;-</span> <span class="fu">which.max</span>(data<span class="sc">$</span>size)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>data[highest_size_index, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      name size has_mall   size size_ratio
+3 almaznyj 25.7    FALSE medium          1</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>lowest_size_index <span class="ot">&lt;-</span> <span class="fu">which.min</span>(data<span class="sc">$</span>size)</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>data[lowest_size_index, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   name size has_mall  size size_ratio
+2 podol 14.6    FALSE small  0.5680934</code></pre>
+</div>
+</div>
+<p>3.1. The Quest: Find Your Data Find one simple, real-world dataset that fits your theme.</p>
+<p>Where to look: Kaggle, TidyTuesday, data.gov, or other public data portals.</p>
+<p>Format: Any format you are able to read. For simplicity it is proposed to use textual (csv, txt) or Excel format.</p>
+<p>Requirements:</p>
+<p>At least 50 rows.</p>
+<p>At least 4 columns.</p>
+<p>A mix of numeric and character/factor data.</p>
+<p>Action:</p>
+<p>Download the data file and place it in your R project directory.</p>
+<p>In your task file add a line with the link to the data source (e.g., Data from: https://…).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data from: https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>3.2. The Import: Load Your Data</p>
+<p>Install tidyverse: If you haven’t, run install.packages(“tidyverse”) in your console (just once).</p>
+<p>Load libraries: At the top of your script, add library(dplyr) and library(readr) (library(readxl) in case of Excel file format).</p>
+<p>Read the data: Use read_csv() (or read_excel()) to load your dataset into a new data frame.</p>
+</section>
+<section id="load-the-tidyverse-libraries" class="level1">
+<h1>Load the Tidyverse libraries</h1>
+<p>library(dplyr) library(readr)</p>
+</section>
+<section id="load-your-data" class="level1">
+<h1>Load your data</h1>
+<p>my_data &lt;- read_csv(“AB_NYC_2019.csv”)</p>
+<p>First Inspection: Immediately after loading, inspect your data to make sure it loaded correctly. # See the structure and column types glimpse(my_data)</p>
+</section>
+<section id="see-the-first-6-rows" class="level1">
+<h1>See the first 6 rows</h1>
+<p>head(my_data)</p>
+</section>
+<section id="get-a-statistical-summary" class="level1">
+<h1>Get a statistical summary</h1>
+<p>summary(my_data)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install (only once)</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;tidyverse&quot;)</span></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: пакет &#39;dplyr&#39; был собран под R версии 4.5.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Присоединяю пакет: &#39;dplyr&#39;</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Следующие объекты скрыты от &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Следующие объекты скрыты от &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: пакет &#39;readr&#39; был собран под R версии 4.5.2</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dataset </span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;AB_NYC_2019.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 48895 Columns: 16</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr   (5): name, host_name, neighbourhood_group, neighbourhood, room_type
+dbl  (10): id, host_id, latitude, longitude, price, minimum_nights, number_o...
+date  (1): last_review
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First inspection</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(my_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 48,895
+Columns: 16
+$ id                             &lt;dbl&gt; 2539, 2595, 3647, 3831, 5022, 5099, 512…
+$ name                           &lt;chr&gt; &quot;Clean &amp; quiet apt home by the park&quot;, &quot;…
+$ host_id                        &lt;dbl&gt; 2787, 2845, 4632, 4869, 7192, 7322, 735…
+$ host_name                      &lt;chr&gt; &quot;John&quot;, &quot;Jennifer&quot;, &quot;Elisabeth&quot;, &quot;LisaR…
+$ neighbourhood_group            &lt;chr&gt; &quot;Brooklyn&quot;, &quot;Manhattan&quot;, &quot;Manhattan&quot;, &quot;…
+$ neighbourhood                  &lt;chr&gt; &quot;Kensington&quot;, &quot;Midtown&quot;, &quot;Harlem&quot;, &quot;Cli…
+$ latitude                       &lt;dbl&gt; 40.64749, 40.75362, 40.80902, 40.68514,…
+$ longitude                      &lt;dbl&gt; -73.97237, -73.98377, -73.94190, -73.95…
+$ room_type                      &lt;chr&gt; &quot;Private room&quot;, &quot;Entire home/apt&quot;, &quot;Pri…
+$ price                          &lt;dbl&gt; 149, 225, 150, 89, 80, 200, 60, 79, 79,…
+$ minimum_nights                 &lt;dbl&gt; 1, 1, 3, 1, 10, 3, 45, 2, 2, 1, 5, 2, 4…
+$ number_of_reviews              &lt;dbl&gt; 9, 45, 0, 270, 9, 74, 49, 430, 118, 160…
+$ last_review                    &lt;date&gt; 2018-10-19, 2019-05-21, NA, 2019-07-05…
+$ reviews_per_month              &lt;dbl&gt; 0.21, 0.38, NA, 4.64, 0.10, 0.59, 0.40,…
+$ calculated_host_listings_count &lt;dbl&gt; 6, 2, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 3, …
+$ availability_365               &lt;dbl&gt; 365, 355, 365, 194, 0, 129, 0, 220, 0, …</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(my_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 16
+     id name        host_id host_name neighbourhood_group neighbourhood latitude
+  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;               &lt;chr&gt;            &lt;dbl&gt;
+1  2539 Clean &amp; qu…    2787 John      Brooklyn            Kensington        40.6
+2  2595 Skylit Mid…    2845 Jennifer  Manhattan           Midtown           40.8
+3  3647 THE VILLAG…    4632 Elisabeth Manhattan           Harlem            40.8
+4  3831 Cozy Entir…    4869 LisaRoxa… Brooklyn            Clinton Hill      40.7
+5  5022 Entire Apt…    7192 Laura     Manhattan           East Harlem       40.8
+6  5099 Large Cozy…    7322 Chris     Manhattan           Murray Hill       40.7
+# ℹ 9 more variables: longitude &lt;dbl&gt;, room_type &lt;chr&gt;, price &lt;dbl&gt;,
+#   minimum_nights &lt;dbl&gt;, number_of_reviews &lt;dbl&gt;, last_review &lt;date&gt;,
+#   reviews_per_month &lt;dbl&gt;, calculated_host_listings_count &lt;dbl&gt;,
+#   availability_365 &lt;dbl&gt;</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(my_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       id               name              host_id           host_name        
+ Min.   :    2539   Length:48895       Min.   :     2438   Length:48895      
+ 1st Qu.: 9471945   Class :character   1st Qu.:  7822033   Class :character  
+ Median :19677284   Mode  :character   Median : 30793816   Mode  :character  
+ Mean   :19017143                      Mean   : 67620011                     
+ 3rd Qu.:29152178                      3rd Qu.:107434423                     
+ Max.   :36487245                      Max.   :274321313                     
+                                                                             
+ neighbourhood_group neighbourhood         latitude       longitude     
+ Length:48895        Length:48895       Min.   :40.50   Min.   :-74.24  
+ Class :character    Class :character   1st Qu.:40.69   1st Qu.:-73.98  
+ Mode  :character    Mode  :character   Median :40.72   Median :-73.96  
+                                        Mean   :40.73   Mean   :-73.95  
+                                        3rd Qu.:40.76   3rd Qu.:-73.94  
+                                        Max.   :40.91   Max.   :-73.71  
+                                                                        
+  room_type             price         minimum_nights    number_of_reviews
+ Length:48895       Min.   :    0.0   Min.   :   1.00   Min.   :  0.00   
+ Class :character   1st Qu.:   69.0   1st Qu.:   1.00   1st Qu.:  1.00   
+ Mode  :character   Median :  106.0   Median :   3.00   Median :  5.00   
+                    Mean   :  152.7   Mean   :   7.03   Mean   : 23.27   
+                    3rd Qu.:  175.0   3rd Qu.:   5.00   3rd Qu.: 24.00   
+                    Max.   :10000.0   Max.   :1250.00   Max.   :629.00   
+                                                                         
+  last_review         reviews_per_month calculated_host_listings_count
+ Min.   :2011-03-28   Min.   : 0.010    Min.   :  1.000               
+ 1st Qu.:2018-07-08   1st Qu.: 0.190    1st Qu.:  1.000               
+ Median :2019-05-19   Median : 0.720    Median :  1.000               
+ Mean   :2018-10-04   Mean   : 1.373    Mean   :  7.144               
+ 3rd Qu.:2019-06-23   3rd Qu.: 2.020    3rd Qu.:  2.000               
+ Max.   :2019-07-08   Max.   :58.500    Max.   :327.000               
+ NA&#39;s   :10052        NA&#39;s   :10052                                   
+ availability_365
+ Min.   :  0.0   
+ 1st Qu.:  0.0   
+ Median : 45.0   
+ Mean   :112.8   
+ 3rd Qu.:227.0   
+ Max.   :365.0   
+                 </code></pre>
+</div>
+</div>
+<p>3.3. The Interrogation: Explore with dplyr This is the core of the task. Your goal is to ask and answer 5 interesting questions about your new dataset.</p>
+<p>You must write the question in plain English (as a comment), followed by the dplyr code that answers it.</p>
+<p>You must use each of the following dplyr “verbs” at least once:</p>
+<p>select() - To pick specific columns.</p>
+<p>filter() - To subset rows based on a condition.</p>
+<p>arrange() - To sort your results (e.g., with desc()).</p>
+<p>mutate() - To create a new column.</p>
+<p>group_by() and summarise() - To get summary statistics (like mean(), n(), max(), etc.).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 1:</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Which neighbourhood groups have the highest average price?</span></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>my_data <span class="sc">%&gt;%</span> </span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(neighbourhood_group) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_price =</span> <span class="fu">mean</span>(price, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_price))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  neighbourhood_group avg_price
+  &lt;chr&gt;                   &lt;dbl&gt;
+1 Manhattan               197. 
+2 Brooklyn                124. 
+3 Staten Island           115. 
+4 Queens                   99.5
+5 Bronx                    87.5</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 2:</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Which 10 ads are the most expensive?</span></span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>my_data <span class="sc">%&gt;%</span> </span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, host_id, neighbourhood, price) <span class="sc">%&gt;%</span> </span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(price)) <span class="sc">%&gt;%</span> </span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 4
+   name                                              host_id neighbourhood price
+   &lt;chr&gt;                                               &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;
+ 1 Furnished room in Astoria apartment                2.06e7 Astoria       10000
+ 2 Luxury 1 bedroom apt. -stunning Manhattan views    5.14e6 Greenpoint    10000
+ 3 1-BR Lincoln Center                                7.24e7 Upper West S… 10000
+ 4 Spanish Harlem Apt                                 1.24e6 East Harlem    9999
+ 5 Quiet, Clean, Lit @ LES &amp; Chinatown                3.91e6 Lower East S…  9999
+ 6 2br - The Heart of NYC: Manhattans Lower East Si…  4.38e6 Lower East S…  9999
+ 7 Beautiful/Spacious 1 bed luxury flat-TriBeCa/Soho  1.81e7 Tribeca        8500
+ 8 Film Location                                      1.18e6 Clinton Hill   8000
+ 9 East 72nd Townhouse by (Hidden by Airbnb)          1.56e8 Upper East S…  7703
+10 70&#39; Luxury MotorYacht on the Hudson                7.41e6 Battery Park…  7500</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 3:</span></span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="co"># How many listings are there for each room type (room_type)?</span></span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>my_data <span class="sc">%&gt;%</span> </span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(room_type) <span class="sc">%&gt;%</span> </span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  room_type       count
+  &lt;chr&gt;           &lt;int&gt;
+1 Entire home/apt 25409
+2 Private room    22326
+3 Shared room      1160</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 4:</span></span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a new column “price_per_minimum_stay” = price / minimum_nights.</span></span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the first 10 rows.</span></span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>my_data <span class="sc">%&gt;%</span> </span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(minimum_nights <span class="sc">&gt;</span> <span class="dv">0</span>, price <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">price_per_minimum_stay =</span> price <span class="sc">/</span> minimum_nights) <span class="sc">%&gt;%</span> </span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, neighbourhood_group, price, minimum_nights, price_per_minimum_stay) <span class="sc">%&gt;%</span> </span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 5
+   name          neighbourhood_group price minimum_nights price_per_minimum_stay
+   &lt;chr&gt;         &lt;chr&gt;               &lt;dbl&gt;          &lt;dbl&gt;                  &lt;dbl&gt;
+ 1 Clean &amp; quie… Brooklyn              149              1                 149   
+ 2 Skylit Midto… Manhattan             225              1                 225   
+ 3 THE VILLAGE … Manhattan             150              3                  50   
+ 4 Cozy Entire … Brooklyn               89              1                  89   
+ 5 Entire Apt: … Manhattan              80             10                   8   
+ 6 Large Cozy 1… Manhattan             200              3                  66.7 
+ 7 BlissArtsSpa… Brooklyn               60             45                   1.33
+ 8 Large Furnis… Manhattan              79              2                  39.5 
+ 9 Cozy Clean G… Manhattan              79              2                  39.5 
+10 Cute &amp; Cozy … Manhattan             150              1                 150   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Question 5:</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter: listings in Manhattan over $200 with a minimum of 3 nights.</span></span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>my_data <span class="sc">%&gt;%</span> </span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(neighbourhood_group <span class="sc">==</span> <span class="st">&quot;Manhattan&quot;</span>,</span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a>         price <span class="sc">&gt;</span> <span class="dv">200</span>,</span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a>         minimum_nights <span class="sc">&gt;=</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, neighbourhood, price, minimum_nights)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3,459 × 4
+   name                                       neighbourhood price minimum_nights
+   &lt;chr&gt;                                      &lt;chr&gt;         &lt;dbl&gt;          &lt;dbl&gt;
+ 1 Sunny &amp; Spacious Chelsea Apartment         Chelsea         375            180
+ 2 SpaHa Loft: Enormous and Bright            East Harlem     225              4
+ 3 Lovely EV Artist&#39;s Home                    East Village    230              9
+ 4 Entire 2 Bedroom - Large &amp; Sunny           Lower East S…   285              5
+ 5 2000 SF 3br 2bath West Village private  t… West Village    500              4
+ 6 Comfortable UWS 2-BD Family-Friendly Brow… Upper West S…   235              6
+ 7 Sunny, clean 1 bdrm in W. Village          West Village    225             45
+ 8 Light and Airy Upper East Side 1 BDR apar… Upper East S…   219              4
+ 9 Charming &amp; Cozy midtown loft any WEEK END… Upper East S…   250              3
+10 Great new apt, close to everything         Hell&#39;s Kitch…   250              3
+# ℹ 3,449 more rows</code></pre>
 </div>
 </div>
 </section>

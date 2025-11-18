@@ -254,3 +254,127 @@ lowest_size_index <- which.min(data$size)
 data[lowest_size_index, ]
 
 ```
+3.1. The Quest: Find Your Data
+Find one simple, real-world dataset that fits your theme.
+
+Where to look: Kaggle, TidyTuesday, data.gov, or other public data portals.
+
+Format: Any format you are able to read. For simplicity it is proposed to use textual (csv, txt) or Excel format.
+
+Requirements:
+
+At least 50 rows.
+
+At least 4 columns.
+
+A mix of numeric and character/factor data.
+
+Action:
+
+Download the data file and place it in your R project directory.
+
+In your task file add a line with the link to the data source (e.g., Data from: https://…).
+```{r}
+# Data from: https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data
+```
+3.2. The Import: Load Your Data
+
+Install tidyverse: If you haven’t, run install.packages("tidyverse") in your console (just once).
+
+Load libraries: At the top of your script, add library(dplyr) and library(readr) (library(readxl) in case of Excel file format).
+
+Read the data: Use read_csv() (or read_excel()) to load your dataset into a new data frame.
+
+# Load the Tidyverse libraries
+library(dplyr)
+library(readr)
+
+# Load your data 
+my_data <- read_csv("AB_NYC_2019.csv")
+
+First Inspection: Immediately after loading, inspect your data to make sure it loaded correctly.
+# See the structure and column types
+glimpse(my_data)
+
+# See the first 6 rows
+head(my_data)
+
+# Get a statistical summary
+summary(my_data)
+```{r}
+# Install (only once)
+# install.packages("tidyverse")
+
+library(dplyr)
+library(readr)
+
+# Load dataset 
+my_data <- read_csv("AB_NYC_2019.csv")
+
+# First inspection
+glimpse(my_data)
+head(my_data)
+summary(my_data)
+```
+3.3. The Interrogation: Explore with dplyr
+This is the core of the task. Your goal is to ask and answer 5 interesting questions about your new dataset.
+
+You must write the question in plain English (as a comment), followed by the dplyr code that answers it.
+
+You must use each of the following dplyr “verbs” at least once:
+
+select() - To pick specific columns.
+
+filter() - To subset rows based on a condition.
+
+arrange() - To sort your results (e.g., with desc()).
+
+mutate() - To create a new column.
+
+group_by() and summarise() - To get summary statistics (like mean(), n(), max(), etc.).
+```{r}
+# Question 1:
+# Which neighbourhood groups have the highest average price?
+my_data %>% 
+  group_by(neighbourhood_group) %>% 
+  summarise(avg_price = mean(price, na.rm = TRUE)) %>% 
+  arrange(desc(avg_price))
+```
+
+
+```{r}
+# Question 2:
+# Which 10 ads are the most expensive?
+my_data %>% 
+  select(name, host_id, neighbourhood, price) %>% 
+  arrange(desc(price)) %>% 
+  head(10)
+```
+
+```{r}
+# Question 3:
+# How many listings are there for each room type (room_type)?
+my_data %>% 
+  group_by(room_type) %>% 
+  summarise(count = n())
+```
+```{r}
+# Question 4:
+# Add a new column “price_per_minimum_stay” = price / minimum_nights.
+# Show the first 10 rows.
+my_data %>% 
+  filter(minimum_nights > 0, price > 0) %>% 
+  mutate(price_per_minimum_stay = price / minimum_nights) %>% 
+  select(name, neighbourhood_group, price, minimum_nights, price_per_minimum_stay) %>% 
+  head(10)
+```
+```{r}
+# Question 5:
+# Filter: listings in Manhattan over $200 with a minimum of 3 nights.
+my_data %>% 
+  filter(neighbourhood_group == "Manhattan",
+         price > 200,
+         minimum_nights >= 3) %>% 
+  select(name, neighbourhood, price, minimum_nights)
+```
+
