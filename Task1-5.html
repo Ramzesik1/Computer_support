@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Roman Havrylenko">
-<meta name="dcterms.date" content="2024-10-01">
+<meta name="dcterms.date" content="2025-10-01">
 
-<title>Task1</title>
+<title>Task1-5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -2209,7 +2209,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Task1</h1>
+<h1 class="title">Task1-5</h1>
 </div>
 
 
@@ -2226,7 +2226,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2024</p>
+      <p class="date">October 1, 2025</p>
     </div>
   </div>
   
@@ -2294,7 +2294,7 @@ vertical-align: -.125em;
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>vec_log <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>vec_log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE</code></pre>
+<pre><code> [1]  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE</code></pre>
 </div>
 </div>
 </section>
@@ -2309,17 +2309,17 @@ vertical-align: -.125em;
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>m</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
-[1,]  -42    4   17
-[2,]   16   47   44
-[3,]  -48   23   40</code></pre>
+[1,]  -39   44    8
+[2,]  -22   20   26
+[3,]    0   34  -19</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowMeans</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -7.00000 35.66667  5.00000</code></pre>
+<pre><code>[1] 4.333333 8.000000 5.000000</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(m)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] -24.66667  24.66667  33.66667</code></pre>
+<pre><code>[1] -20.33333  32.66667   5.00000</code></pre>
 </div>
 </div>
 </section>
@@ -2349,9 +2349,9 @@ vertical-align: -.125em;
 
 [[6]]
      [,1] [,2] [,3]
-[1,]  -42    4   17
-[2,]   16   47   44
-[3,]  -48   23   40</code></pre>
+[1,]  -39   44    8
+[2,]  -22   20   26
+[3,]    0   34  -19</code></pre>
 </div>
 </div>
 </section>
@@ -2439,11 +2439,11 @@ Levels: small medium big</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>vec_log[vec_log]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
+<pre><code>[1] TRUE TRUE TRUE TRUE TRUE TRUE</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(vec_log)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  1  2  3  4  5  6  7  8 10</code></pre>
+<pre><code>[1]  1  3  5  6  7 10</code></pre>
 </div>
 </div>
 <p>2.3. Investigating Your Data Frame Use the data frame you created in Task 1.</p>
@@ -2813,6 +2813,218 @@ $ availability_365               &lt;dbl&gt; 365, 355, 365, 194, 0, 129, 0, 220,
  9 Charming &amp; Cozy midtown loft any WEEK END… Upper East S…   250              3
 10 Great new apt, close to everything         Hell&#39;s Kitch…   250              3
 # ℹ 3,449 more rows</code></pre>
+</div>
+</div>
+<p>Task 4. Building a “Toolkit” for Your Universe (Functions)</p>
+<p>4.1. The “Greeting” Function (A Simple Start) Let’s start with the basics. Write a simple function that prints a welcome message for your “universe”.</p>
+<p>Write the function: It should take at least one argument (e.g., your_name or universe_name).</p>
+<p>Inside the function: Use print() or cat() to display a message.</p>
+<p>Call the function: After you define the function, you must call it to see the result.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>welcome_to_my_universe <span class="ot">&lt;-</span> <span class="cf">function</span>(Roman) {</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;------------------------------------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Analysis Toolkit for PPFK</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Report prepared by: Roman </span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;------------------------------------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Вызов</span></span>
+<span id="cb89-9"><a href="#cb89-9" aria-hidden="true" tabindex="-1"></a><span class="fu">welcome_to_my_universe</span>(<span class="st">&quot;PPFK&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>------------------------------------
+Analysis Toolkit for PPFK
+Report prepared by: Roman 
+------------------------------------</code></pre>
+</div>
+</div>
+<p>4.2. The “Loading” Function (A Good Practice) In Task 3, you wrote code to load and inspect your data. Let’s turn that into a function. This is a very common and useful practice.</p>
+<p>Write the function: Name it load_and_inspect. It should take one argument: file_path.</p>
+<p>Inside the function:</p>
+<p>Load the readr and dplyr libraries.</p>
+<p>Use read_csv(file_path) to load the data.</p>
+<p>Print a message (e.g., “Data loaded successfully.”).</p>
+<p>Print the glimpse() of the data.</p>
+<p>Print the head() of the data.</p>
+<p>Return the data frame (use the return() command).</p>
+<p>Call the function:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a>load_and_inspect <span class="ot">&lt;-</span> <span class="cf">function</span>(file_path) {</span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(file_path)</span>
+<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-8"><a href="#cb91-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">✔ Data Loaded:&quot;</span>, file_path, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb91-9"><a href="#cb91-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">glimpse</span>(data))</span>
+<span id="cb91-10"><a href="#cb91-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-11"><a href="#cb91-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">--- First 6 rows ---</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb91-12"><a href="#cb91-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">head</span>(data))</span>
+<span id="cb91-13"><a href="#cb91-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb91-14"><a href="#cb91-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(data)</span>
+<span id="cb91-15"><a href="#cb91-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb91-16"><a href="#cb91-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-17"><a href="#cb91-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function, saving its output to a variable</span></span>
+<span id="cb91-18"><a href="#cb91-18" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">load_and_inspect</span>(<span class="st">&quot;C:/Users/roomg/OneDrive/Рабочий стол/AB_NYC_2019.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 48895 Columns: 16
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+chr   (5): name, host_name, neighbourhood_group, neighbourhood, room_type
+dbl  (10): id, host_id, latitude, longitude, price, minimum_nights, number_o...
+date  (1): last_review
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+✔ Data Loaded: C:/Users/roomg/OneDrive/Рабочий стол/AB_NYC_2019.csv 
+Rows: 48,895
+Columns: 16
+$ id                             &lt;dbl&gt; 2539, 2595, 3647, 3831, 5022, 5099, 512…
+$ name                           &lt;chr&gt; &quot;Clean &amp; quiet apt home by the park&quot;, &quot;…
+$ host_id                        &lt;dbl&gt; 2787, 2845, 4632, 4869, 7192, 7322, 735…
+$ host_name                      &lt;chr&gt; &quot;John&quot;, &quot;Jennifer&quot;, &quot;Elisabeth&quot;, &quot;LisaR…
+$ neighbourhood_group            &lt;chr&gt; &quot;Brooklyn&quot;, &quot;Manhattan&quot;, &quot;Manhattan&quot;, &quot;…
+$ neighbourhood                  &lt;chr&gt; &quot;Kensington&quot;, &quot;Midtown&quot;, &quot;Harlem&quot;, &quot;Cli…
+$ latitude                       &lt;dbl&gt; 40.64749, 40.75362, 40.80902, 40.68514,…
+$ longitude                      &lt;dbl&gt; -73.97237, -73.98377, -73.94190, -73.95…
+$ room_type                      &lt;chr&gt; &quot;Private room&quot;, &quot;Entire home/apt&quot;, &quot;Pri…
+$ price                          &lt;dbl&gt; 149, 225, 150, 89, 80, 200, 60, 79, 79,…
+$ minimum_nights                 &lt;dbl&gt; 1, 1, 3, 1, 10, 3, 45, 2, 2, 1, 5, 2, 4…
+$ number_of_reviews              &lt;dbl&gt; 9, 45, 0, 270, 9, 74, 49, 430, 118, 160…
+$ last_review                    &lt;date&gt; 2018-10-19, 2019-05-21, NA, 2019-07-05…
+$ reviews_per_month              &lt;dbl&gt; 0.21, 0.38, NA, 4.64, 0.10, 0.59, 0.40,…
+$ calculated_host_listings_count &lt;dbl&gt; 6, 2, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 3, …
+$ availability_365               &lt;dbl&gt; 365, 355, 365, 194, 0, 129, 0, 220, 0, …
+# A tibble: 48,895 × 16
+      id name       host_id host_name neighbourhood_group neighbourhood latitude
+   &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;               &lt;chr&gt;            &lt;dbl&gt;
+ 1  2539 Clean &amp; q…    2787 John      Brooklyn            Kensington        40.6
+ 2  2595 Skylit Mi…    2845 Jennifer  Manhattan           Midtown           40.8
+ 3  3647 THE VILLA…    4632 Elisabeth Manhattan           Harlem            40.8
+ 4  3831 Cozy Enti…    4869 LisaRoxa… Brooklyn            Clinton Hill      40.7
+ 5  5022 Entire Ap…    7192 Laura     Manhattan           East Harlem       40.8
+ 6  5099 Large Coz…    7322 Chris     Manhattan           Murray Hill       40.7
+ 7  5121 BlissArts…    7356 Garon     Brooklyn            Bedford-Stuy…     40.7
+ 8  5178 Large Fur…    8967 Shunichi  Manhattan           Hell&#39;s Kitch…     40.8
+ 9  5203 Cozy Clea…    7490 MaryEllen Manhattan           Upper West S…     40.8
+10  5238 Cute &amp; Co…    7549 Ben       Manhattan           Chinatown         40.7
+# ℹ 48,885 more rows
+# ℹ 9 more variables: longitude &lt;dbl&gt;, room_type &lt;chr&gt;, price &lt;dbl&gt;,
+#   minimum_nights &lt;dbl&gt;, number_of_reviews &lt;dbl&gt;, last_review &lt;date&gt;,
+#   reviews_per_month &lt;dbl&gt;, calculated_host_listings_count &lt;dbl&gt;,
+#   availability_365 &lt;dbl&gt;
+
+--- First 6 rows ---
+# A tibble: 6 × 16
+     id name        host_id host_name neighbourhood_group neighbourhood latitude
+  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;               &lt;chr&gt;            &lt;dbl&gt;
+1  2539 Clean &amp; qu…    2787 John      Brooklyn            Kensington        40.6
+2  2595 Skylit Mid…    2845 Jennifer  Manhattan           Midtown           40.8
+3  3647 THE VILLAG…    4632 Elisabeth Manhattan           Harlem            40.8
+4  3831 Cozy Entir…    4869 LisaRoxa… Brooklyn            Clinton Hill      40.7
+5  5022 Entire Apt…    7192 Laura     Manhattan           East Harlem       40.8
+6  5099 Large Cozy…    7322 Chris     Manhattan           Murray Hill       40.7
+# ℹ 9 more variables: longitude &lt;dbl&gt;, room_type &lt;chr&gt;, price &lt;dbl&gt;,
+#   minimum_nights &lt;dbl&gt;, number_of_reviews &lt;dbl&gt;, last_review &lt;date&gt;,
+#   reviews_per_month &lt;dbl&gt;, calculated_host_listings_count &lt;dbl&gt;,
+#   availability_365 &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>4.3. The “Query” Function (The Core of the Task) This is the most important step. You will turn one of your dplyr queries from Task 3 into a reusable function.</p>
+<p>Look back at your Task 3 code. You probably wrote something like this:</p>
+<p>my_data |&gt; filter(population &gt; 1000000)</p>
+<p>my_data |&gt; filter(planet_type == “Gas Giant”)</p>
+<p>That 1000000 or “Gas Giant” is a “magic number” or “magic string”. A function lets you turn it into a parameter.</p>
+<p>Choose a query: Pick one of your filter() or summarise() queries from Task 3.</p>
+<p>Write the function:</p>
+<p>Give it a descriptive name (e.g., find_pollution_by_disctrict, filter_cities_by_population).</p>
+<p>It must take at least two arguments: data (for the data frame) and a parameter for the value you want to change (e.g., pop_threshold or type_name).</p>
+<p>The function should perform the dplyr query and return the result.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>filter_by_area_and_price <span class="ot">&lt;-</span> <span class="cf">function</span>(data, area_name, max_price) {</span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>  result <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(neighbourhood_group <span class="sc">==</span> area_name) <span class="sc">|&gt;</span></span>
+<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(price <span class="sc">&lt;=</span> max_price)</span>
+<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb94-7"><a href="#cb94-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result)</span>
+<span id="cb94-8"><a href="#cb94-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb94-9"><a href="#cb94-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-10"><a href="#cb94-10" aria-hidden="true" tabindex="-1"></a>cheap_manhattan <span class="ot">&lt;-</span> <span class="fu">filter_by_area_and_price</span>(my_data, <span class="st">&quot;Manhattan&quot;</span>, <span class="dv">100</span>)</span>
+<span id="cb94-11"><a href="#cb94-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb94-12"><a href="#cb94-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cheap_manhattan)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6,921 × 16
+      id name       host_id host_name neighbourhood_group neighbourhood latitude
+   &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;               &lt;chr&gt;            &lt;dbl&gt;
+ 1  5022 Entire Ap…    7192 Laura     Manhattan           East Harlem       40.8
+ 2  5178 Large Fur…    8967 Shunichi  Manhattan           Hell&#39;s Kitch…     40.8
+ 3  5203 Cozy Clea…    7490 MaryEllen Manhattan           Upper West S…     40.8
+ 4  5441 Central M…    7989 Kate      Manhattan           Hell&#39;s Kitch…     40.8
+ 5  6021 Wonderful…   11528 Claudio   Manhattan           Upper West S…     40.8
+ 6  8700 Magnifiqu…   26394 Claude &amp;… Manhattan           Inwood            40.9
+ 7  9518 SPACIOUS,…   31374 Shon      Manhattan           Inwood            40.9
+ 8  9668 front roo…   32294 Ssameer … Manhattan           Harlem            40.8
+ 9  9704 Spacious …   32045 Teri      Manhattan           Harlem            40.8
+10  9783 back room…   32294 Ssameer … Manhattan           Harlem            40.8
+# ℹ 6,911 more rows
+# ℹ 9 more variables: longitude &lt;dbl&gt;, room_type &lt;chr&gt;, price &lt;dbl&gt;,
+#   minimum_nights &lt;dbl&gt;, number_of_reviews &lt;dbl&gt;, last_review &lt;date&gt;,
+#   reviews_per_month &lt;dbl&gt;, calculated_host_listings_count &lt;dbl&gt;,
+#   availability_365 &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>4.4. The “Reporting” Function Let’s combine everything. Write a single function that calculates several key statistics for a specific group or category in your data.</p>
+<p>Write the function: Name it generate_report. It should take data and a category_name as arguments (e.g., a specific city, planet type, or region).</p>
+<p>Inside the function:</p>
+<p>filter() your data for only the category_name provided.</p>
+<p>Calculate 3-4 interesting summary statistics (e.g., mean(), max(), min(), n()).</p>
+<p>Use cat() to print a nicely formatted “report” to the console.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>generate_report <span class="ot">&lt;-</span> <span class="cf">function</span>(data, area_name) {</span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>  area_data <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(neighbourhood_group <span class="sc">==</span> area_name)</span>
+<span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>  n_listings <span class="ot">&lt;-</span> <span class="fu">nrow</span>(area_data)</span>
+<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a>  avg_price <span class="ot">&lt;-</span> <span class="fu">mean</span>(area_data<span class="sc">$</span>price, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a>  min_price <span class="ot">&lt;-</span> <span class="fu">min</span>(area_data<span class="sc">$</span>price, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-9"><a href="#cb96-9" aria-hidden="true" tabindex="-1"></a>  max_price <span class="ot">&lt;-</span> <span class="fu">max</span>(area_data<span class="sc">$</span>price, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-10"><a href="#cb96-10" aria-hidden="true" tabindex="-1"></a>  avg_reviews <span class="ot">&lt;-</span> <span class="fu">mean</span>(area_data<span class="sc">$</span>number_of_reviews, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb96-11"><a href="#cb96-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb96-12"><a href="#cb96-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">----------- Report for:&quot;</span>, area_name, <span class="st">&quot;-----------</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-13"><a href="#cb96-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Total Listings:&quot;</span>, n_listings, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-14"><a href="#cb96-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Average Price:&quot;</span>, <span class="fu">round</span>(avg_price, <span class="dv">2</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-15"><a href="#cb96-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Minimum Price:&quot;</span>, min_price, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-16"><a href="#cb96-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Maximum Price:&quot;</span>, max_price, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-17"><a href="#cb96-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;Average Number of Reviews:&quot;</span>, <span class="fu">round</span>(avg_reviews, <span class="dv">2</span>), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-18"><a href="#cb96-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;-----------------------------------------------</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
+<span id="cb96-19"><a href="#cb96-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb96-20"><a href="#cb96-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-21"><a href="#cb96-21" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_report</span>(my_data, <span class="st">&quot;Manhattan&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+----------- Report for: Manhattan -----------
+Total Listings: 21661 
+Average Price: 196.88 
+Minimum Price: 0 
+Maximum Price: 10000 
+Average Number of Reviews: 20.99 
+-----------------------------------------------</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_report</span>(my_data, <span class="st">&quot;Brooklyn&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+----------- Report for: Brooklyn -----------
+Total Listings: 20104 
+Average Price: 124.38 
+Minimum Price: 0 
+Maximum Price: 10000 
+Average Number of Reviews: 24.2 
+-----------------------------------------------</code></pre>
 </div>
 </div>
 </section>

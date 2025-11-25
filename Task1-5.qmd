@@ -1,7 +1,7 @@
 ---
-title: "Task1"
+title: "Task1-5"
 author: "Roman Havrylenko"
-date: "10/01/2024"
+date: "10/01/2025"
 format:
   html:
     embed-resources: true
@@ -377,4 +377,138 @@ my_data %>%
          minimum_nights >= 3) %>% 
   select(name, neighbourhood, price, minimum_nights)
 ```
+Task 4. Building a “Toolkit” for Your Universe (Functions)
 
+4.1. The “Greeting” Function (A Simple Start)
+Let’s start with the basics. Write a simple function that prints a welcome message for your “universe”.
+
+Write the function: It should take at least one argument (e.g., your_name or universe_name).
+
+Inside the function: Use print() or cat() to display a message.
+
+Call the function: After you define the function, you must call it to see the result.
+```{r}
+welcome_to_my_universe <- function(Roman) {
+  cat("------------------------------------\n")
+  cat("Analysis Toolkit for PPFK\n")
+  cat("Report prepared by: Roman \n")
+  cat("------------------------------------\n")
+}
+
+# Вызов
+welcome_to_my_universe("PPFK")
+
+```
+4.2. The “Loading” Function (A Good Practice)
+In Task 3, you wrote code to load and inspect your data. Let’s turn that into a function. This is a very common and useful practice.
+
+Write the function: Name it load_and_inspect. It should take one argument: file_path.
+
+Inside the function:
+
+Load the readr and dplyr libraries.
+
+Use read_csv(file_path) to load the data.
+
+Print a message (e.g., “Data loaded successfully.”).
+
+Print the glimpse() of the data.
+
+Print the head() of the data.
+
+Return the data frame (use the return() command).
+
+Call the function:
+```{r}
+library(readr)
+library(dplyr)
+
+load_and_inspect <- function(file_path) {
+  
+  data <- read_csv(file_path)
+  
+  cat("\n✔ Data Loaded:", file_path, "\n")
+  print(glimpse(data))
+  
+  cat("\n--- First 6 rows ---\n")
+  print(head(data))
+  
+  return(data)
+}
+
+# Call the function, saving its output to a variable
+my_data <- load_and_inspect("C:/Users/roomg/OneDrive/Рабочий стол/AB_NYC_2019.csv")
+
+```
+4.3. The “Query” Function (The Core of the Task)
+This is the most important step. You will turn one of your dplyr queries from Task 3 into a reusable function.
+
+Look back at your Task 3 code. You probably wrote something like this:
+
+my_data |> filter(population > 1000000)
+
+my_data |> filter(planet_type == "Gas Giant")
+
+That 1000000 or “Gas Giant” is a “magic number” or “magic string”. A function lets you turn it into a parameter.
+
+Choose a query: Pick one of your filter() or summarise() queries from Task 3.
+
+Write the function:
+
+Give it a descriptive name (e.g., find_pollution_by_disctrict, filter_cities_by_population).
+
+It must take at least two arguments: data (for the data frame) and a parameter for the value you want to change (e.g., pop_threshold or type_name).
+
+The function should perform the dplyr query and return the result.
+```{r}
+filter_by_area_and_price <- function(data, area_name, max_price) {
+  
+  result <- data |>
+    filter(neighbourhood_group == area_name) |>
+    filter(price <= max_price)
+  
+  return(result)
+}
+
+cheap_manhattan <- filter_by_area_and_price(my_data, "Manhattan", 100)
+
+print(cheap_manhattan)
+
+```
+4.4. The “Reporting” Function
+Let’s combine everything. Write a single function that calculates several key statistics for a specific group or category in your data.
+
+Write the function: Name it generate_report. It should take data and a category_name as arguments (e.g., a specific city, planet type, or region).
+
+Inside the function:
+
+filter() your data for only the category_name provided.
+
+Calculate 3-4 interesting summary statistics (e.g., mean(), max(), min(), n()).
+
+Use cat() to print a nicely formatted “report” to the console.
+```{r}
+generate_report <- function(data, area_name) {
+  
+  area_data <- data |>
+    filter(neighbourhood_group == area_name)
+  
+  n_listings <- nrow(area_data)
+  avg_price <- mean(area_data$price, na.rm = TRUE)
+  min_price <- min(area_data$price, na.rm = TRUE)
+  max_price <- max(area_data$price, na.rm = TRUE)
+  avg_reviews <- mean(area_data$number_of_reviews, na.rm = TRUE)
+  
+  cat("\n----------- Report for:", area_name, "-----------\n")
+  cat("Total Listings:", n_listings, "\n")
+  cat("Average Price:", round(avg_price, 2), "\n")
+  cat("Minimum Price:", min_price, "\n")
+  cat("Maximum Price:", max_price, "\n")
+  cat("Average Number of Reviews:", round(avg_reviews, 2), "\n")
+  cat("-----------------------------------------------\n\n")
+}
+
+generate_report(my_data, "Manhattan")
+generate_report(my_data, "Brooklyn")
+
+```
