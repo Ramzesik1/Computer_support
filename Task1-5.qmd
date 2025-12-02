@@ -290,17 +290,17 @@ library(dplyr)
 library(readr)
 
 # Load your data 
-my_data <- read_csv("AB_NYC_2019.csv")
+data <- read_csv("AB_NYC_2019.csv")
 
 First Inspection: Immediately after loading, inspect your data to make sure it loaded correctly.
 # See the structure and column types
-glimpse(my_data)
+glimpse(data)
 
 # See the first 6 rows
-head(my_data)
+head(data)
 
 # Get a statistical summary
-summary(my_data)
+summary(data)
 ```{r}
 # Install (only once)
 # install.packages("tidyverse")
@@ -309,12 +309,12 @@ library(dplyr)
 library(readr)
 
 # Load dataset 
-my_data <- read_csv("AB_NYC_2019.csv")
+data <- read_csv("AB_NYC_2019.csv")
 
 # First inspection
-glimpse(my_data)
-head(my_data)
-summary(my_data)
+glimpse(data)
+head(data)
+summary(data)
 ```
 3.3. The Interrogation: Explore with dplyr
 This is the core of the task. Your goal is to ask and answer 5 interesting questions about your new dataset.
@@ -335,7 +335,7 @@ group_by() and summarise() - To get summary statistics (like mean(), n(), max(),
 ```{r}
 # Question 1:
 # Which neighbourhood groups have the highest average price?
-my_data %>% 
+data %>% 
   group_by(neighbourhood_group) %>% 
   summarise(avg_price = mean(price, na.rm = TRUE)) %>% 
   arrange(desc(avg_price))
@@ -345,7 +345,7 @@ my_data %>%
 ```{r}
 # Question 2:
 # Which 10 ads are the most expensive?
-my_data %>% 
+data %>% 
   select(name, host_id, neighbourhood, price) %>% 
   arrange(desc(price)) %>% 
   head(10)
@@ -354,7 +354,7 @@ my_data %>%
 ```{r}
 # Question 3:
 # How many listings are there for each room type (room_type)?
-my_data %>% 
+data %>% 
   group_by(room_type) %>% 
   summarise(count = n())
 ```
@@ -362,7 +362,7 @@ my_data %>%
 # Question 4:
 # Add a new column “price_per_minimum_stay” = price / minimum_nights.
 # Show the first 10 rows.
-my_data %>% 
+data %>% 
   filter(minimum_nights > 0, price > 0) %>% 
   mutate(price_per_minimum_stay = price / minimum_nights) %>% 
   select(name, neighbourhood_group, price, minimum_nights, price_per_minimum_stay) %>% 
@@ -371,7 +371,7 @@ my_data %>%
 ```{r}
 # Question 5:
 # Filter: listings in Manhattan over $200 with a minimum of 3 nights.
-my_data %>% 
+data %>% 
   filter(neighbourhood_group == "Manhattan",
          price > 200,
          minimum_nights >= 3) %>% 
@@ -437,7 +437,7 @@ load_and_inspect <- function(file_path) {
 }
 
 # Call the function, saving its output to a variable
-my_data <- load_and_inspect("C:/Users/roomg/OneDrive/Рабочий стол/AB_NYC_2019.csv")
+data <- load_and_inspect("C:/Users/roomg/OneDrive/Рабочий стол/AB_NYC_2019.csv")
 
 ```
 4.3. The “Query” Function (The Core of the Task)
@@ -445,9 +445,9 @@ This is the most important step. You will turn one of your dplyr queries from Ta
 
 Look back at your Task 3 code. You probably wrote something like this:
 
-my_data |> filter(population > 1000000)
+data |> filter(population > 1000000)
 
-my_data |> filter(planet_type == "Gas Giant")
+data |> filter(planet_type == "Gas Giant")
 
 That 1000000 or “Gas Giant” is a “magic number” or “magic string”. A function lets you turn it into a parameter.
 
@@ -470,7 +470,7 @@ filter_by_area_and_price <- function(data, area_name, max_price) {
   return(result)
 }
 
-cheap_manhattan <- filter_by_area_and_price(my_data, "Manhattan", 100)
+cheap_manhattan <- filter_by_area_and_price(data, "Manhattan", 100)
 
 print(cheap_manhattan)
 
@@ -508,7 +508,119 @@ generate_report <- function(data, area_name) {
   cat("-----------------------------------------------\n\n")
 }
 
-generate_report(my_data, "Manhattan")
-generate_report(my_data, "Brooklyn")
+generate_report(data, "Manhattan")
+generate_report(data, "Brooklyn")
+
+```
+Task 5. Visualising Your Universe (Base R & ggplot2)
+You have found your data (Task 3) and built tools to analyse it (Task 4). Now, you must present your findings to customers.
+
+Your goal is to create four specific visualizations based on the real-world dataset you imported in Task 3.
+
+Prerequisites:
+
+Use the dataset you found and cleaned in Task 3.
+
+Make sure library(ggplot2) is loaded.
+
+Crucial: Every plot must have a Title, x-axis label, and y-axis label that make sense for your specific theme.
+
+5.1. The Quick Sketch (Base R Histogram)
+Sometimes you need a quick look at the distribution of your data without loading heavy packages.
+
+Choose one numeric variable from your dataset (e.g., price, temperature, speed).
+
+Use the hist() function from base R.
+
+Customise the main title, xlab, and the bar col (colour).
+
+```{r}
+library(dplyr)
+library(readr)
+library(ggplot2)
+
+hist(data$price,
+     main = "Distribution of Airbnb Prices in NYC",
+     xlab = "Price (USD per night)",
+     col = "lightblue",
+     border = "white")
+
+```
+5.2. The Relationship Map (ggplot2 Scatter Plot)
+Now, let’s look for patterns using the industry-standard package, ggplot2.
+
+Choose two numeric variables to see if they are correlated.
+
+Create a scatter plot using geom_point().
+
+Add geom_smooth() to add a relationship between variables to the plot.
+
+Add labs() to rename your axes and title.
+```{r}
+ggplot(data = data, aes(x = minimum_nights, y = price)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue") +
+  geom_smooth(color = "gray") +
+  labs(
+    title = "Relationship Between Minimum Nights and Price",
+    subtitle = "NYC Airbnb Listings, 2019",
+    x = "Minimum Nights Required",
+    y = "Price (USD per night)"
+  ) +
+  theme_minimal()
+
+```
+5.3. The Comparison (ggplot2 Boxplot)
+The Comparison (ggplot2 Boxplot)
+Boxplots are excellent for comparing groups. Let’s see how different categories in your universe perform.
+
+Choose a categorical (or logical) variable for the X-axis (e.g., city, planet_type, species).
+
+Choose a numeric variable for the Y-axis (e.g., price, gravity, lifespan).
+
+Create a plot using geom_boxplot().
+
+Bonus: Use fill to colour the boxes by the same category.
+
+```{r}
+ggplot(data = data, aes(x = neighbourhood_group, y = price, fill = neighbourhood_group)) +
+  geom_boxplot() +
+  labs(
+    title = "Price Distribution by NYC Borough",
+    x = "NYC Borough",
+    y = "Price (USD per night)"
+  ) +
+  theme_light() +
+  theme(legend.position = "none")
+
+```
+5.4. The “Deep Dive” (Faceting or Custom)
+The most powerful feature of ggplot2 is faceting—creating small multiples of the same plot for different groups.
+
+Create a plot (histogram, bar plot, or scatter plot).
+
+Use facet_wrap(~ your_category_variable) to split the plot into a separate panel for each group in your data.
+
+This is incredibly useful for comparing distinct groups (e.g., separate charts for each City or Year).
+```{r}
+ggplot(data = data, aes(x = price)) +
+  geom_histogram(bins = 30, fill = "coral", color = "black") +
+  facet_wrap(~ neighbourhood_group) +
+  labs(
+    title = "Price Distribution Across NYC Neighbourhood Groups",
+    x = "Price (USD per night)",
+    y = "Count"
+  )
+
+```
+5.5. Final Step: Exporting (Saving Your Work)
+A plot is useless if you can’t put it in a report.
+
+Choose your favourite plot from the exercises above.
+
+Run the code to display it in R.
+
+Immediately run the following command to save it to your project folder:
+```{r}
+ggsave("nyc_airbnb_price_boxplot.png", width = 8, height = 6)
 
 ```
